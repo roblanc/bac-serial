@@ -50,6 +50,7 @@ export const allBooks: Book[] = [
     emailCount: 101,
     readingTime: 10,
     coverColor: '#6B5344',
+    coverImage: '/covers/morometii.png',
     year: '1955',
     featured: true,
   },
