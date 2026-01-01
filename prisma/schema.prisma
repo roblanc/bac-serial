@@ -1,0 +1,102 @@
+// This is your Prisma schema file for Turso (libSQL/SQLite)
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Utilizatori
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  emailVerified DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  subscriptions Subscription[]
+  emailLogs     EmailLog[]
+}
+
+// Cărți/Opere literare
+model Book {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  author      String
+  genre       String   // Epic, Liric, Dramă, Populare
+  description String
+  coverColor  String?
+  year        String?
+  emailCount  Int      @default(1)
+  readingTime Int      @default(10)
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  chapters      Chapter[]
+  subscriptions Subscription[]
+}
+
+// Capitole/Fragmente ale fiecărei cărți
+model Chapter {
+  id           String   @id @default(cuid())
+  bookId       String
+  orderIndex   Int
+  title        String
+  content      String
+  notes        String?
+  readingTime  Int      @default(10)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  book       Book        @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  emailLogs  EmailLog[]
+
+  @@unique([bookId, orderIndex])
+  @@index([bookId])
+}
+
+// Abonamente utilizator la cărți
+model Subscription {
+  id                String   @id @default(cuid())
+  userId            String
+  bookId            String
+  currentChapterIdx Int      @default(0)
+  frequency         String   @default("THREE_PER_WEEK") // DAILY, THREE_PER_WEEK, WEEKLY
+  status            String   @default("ACTIVE") // ACTIVE, PAUSED, COMPLETED, CANCELLED
+  pausedUntil       DateTime?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  book Book @relation(fields: [bookId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, bookId])
+  @@index([userId])
+  @@index([bookId])
+  @@index([status])
+}
+
+// Log emailuri trimise
+model EmailLog {
+  id         String   @id @default(cuid())
+  userId     String
+  chapterId  String
+  sentAt     DateTime @default(now())
+  status     String   @default("SENT") // PENDING, SENT, DELIVERED, OPENED, CLICKED, BOUNCED, FAILED
+  openedAt   DateTime?
+  clickedAt  DateTime?
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chapter Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([chapterId])
+  @@index([sentAt])
+}
