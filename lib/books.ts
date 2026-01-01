@@ -37,6 +37,7 @@ export const allBooks: Book[] = [
     emailCount: 68,
     readingTime: 10,
     coverColor: '#4A3728',
+    coverImage: '/covers/ultima-noapte.jpg',
     year: '1930',
     featured: true,
   },
