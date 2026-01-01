@@ -7,6 +7,7 @@ export interface Book {
   emailCount: number
   readingTime: number
   coverColor: string
+  coverImage?: string
   year?: string
   themes?: string[]
   featured?: boolean
@@ -23,6 +24,7 @@ export const allBooks: Book[] = [
     emailCount: 112,
     readingTime: 10,
     coverColor: '#5D4E37',
+    coverImage: '/covers/ion.png',
     year: '1920',
     featured: true,
   },

@@ -75,15 +75,23 @@ export default function BookPage({ params }: PageProps) {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Book Cover */}
           <div className="md:col-span-1">
-            <div
-              className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg"
-              style={{ backgroundColor: book.coverColor }}
-            >
-              <div className="w-full h-full flex items-center justify-center p-6">
-                <span className="text-white text-xl font-bold text-center leading-tight">
-                  {book.title}
-                </span>
-              </div>
+            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg relative">
+              {book.coverImage ? (
+                <img
+                  src={book.coverImage}
+                  alt={book.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div
+                  className="w-full h-full flex items-center justify-center p-6"
+                  style={{ backgroundColor: book.coverColor }}
+                >
+                  <span className="text-white text-xl font-bold text-center leading-tight">
+                    {book.title}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
 
