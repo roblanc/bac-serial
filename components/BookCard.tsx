@@ -44,7 +44,7 @@ export default function BookCard({ book }: BookCardProps) {
         </p>
 
         <p className="text-xs text-gray-400">
-          Read in {book.emailCount} emails
+          Termini în {book.emailCount} emailuri
         </p>
       </div>
     </Link>
