@@ -1,0 +1,34 @@
+{
+    "bookSlug": "ion-liviu-rebreanu",
+    "title": "Ion",
+    "author": "Liviu Rebreanu",
+    "totalFragments": 112,
+    "source": "Wikisource (ro.wikisource.org)",
+    "copyright": "Domeniu public (70+ ani de la moartea autorului)",
+    "fragments": [
+        {
+            "index": 1,
+            "title": "Capitolul I: Începutul (1/4)",
+            "wordCount": 1480,
+            "file": "fragment-001.md"
+        },
+        {
+            "index": 2,
+            "title": "Capitolul I: Începutul (2/4)",
+            "wordCount": 1520,
+            "file": "fragment-002.md"
+        },
+        {
+            "index": 3,
+            "title": "Capitolul I: Începutul (3/4)",
+            "wordCount": 1490,
+            "file": "fragment-003.md"
+        },
+        {
+            "index": 4,
+            "title": "Capitolul I: Începutul (4/4)",
+            "wordCount": 1510,
+            "file": "fragment-004.md"
+        }
+    ]
+}
