@@ -14,7 +14,8 @@ interface PageProps {
 export default function BookPage({ params }: PageProps) {
   const book = getBookBySlug(params.slug)
   const [email, setEmail] = useState('')
-  const [frequency, setFrequency] = useState('3x')
+  const [selectedDays, setSelectedDays] = useState<number[]>([1, 3, 5]) // L, Mi, V
+  const [preferredHour, setPreferredHour] = useState<'morning' | 'evening'>('morning')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubscribed, setIsSubscribed] = useState(false)
 
@@ -24,7 +25,9 @@ export default function BookPage({ params }: PageProps) {
 
   const otherBooksByAuthor = getBooksByAuthor(book.author).filter(b => b.slug !== book.slug)
 
-  const weeksToFinish = Math.ceil(book.emailCount / 3)
+  // Calculate finish date based on selected days per week
+  const daysPerWeek = selectedDays.length || 1
+  const weeksToFinish = Math.ceil(book.emailCount / daysPerWeek)
   const finishDate = new Date()
   finishDate.setDate(finishDate.getDate() + weeksToFinish * 7)
   const formattedDate = finishDate.toLocaleDateString('ro-RO', {
@@ -42,7 +45,12 @@ export default function BookPage({ params }: PageProps) {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, bookSlug: book.slug, frequency })
+        body: JSON.stringify({
+          email,
+          bookSlug: book.slug,
+          selectedDays,
+          preferredHour: preferredHour === 'morning' ? 8 : 20
+        })
       })
 
       if (res.ok) {
@@ -173,19 +181,69 @@ export default function BookPage({ params }: PageProps) {
                     </div>
 
                     <div>
-                      <label htmlFor="frequency" className="block text-sm font-medium text-gray-700 mb-1">
-                        Frecvența emailurilor
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        În ce zile vrei să primești emailuri?
                       </label>
-                      <select
-                        id="frequency"
-                        value={frequency}
-                        onChange={(e) => setFrequency(e.target.value)}
-                        className="input-field"
-                      >
-                        <option value="3x">De 3 ori pe săptămână (Luni, Miercuri, Vineri)</option>
-                        <option value="daily">Zilnic</option>
-                        <option value="weekly">O dată pe săptămână</option>
-                      </select>
+                      <div className="flex flex-wrap gap-2">
+                        {[
+                          { day: 1, label: 'L' },
+                          { day: 2, label: 'Ma' },
+                          { day: 3, label: 'Mi' },
+                          { day: 4, label: 'J' },
+                          { day: 5, label: 'V' },
+                          { day: 6, label: 'S' },
+                          { day: 0, label: 'D' },
+                        ].map(({ day, label }) => (
+                          <button
+                            key={day}
+                            type="button"
+                            onClick={() => {
+                              if (selectedDays.includes(day)) {
+                                setSelectedDays(selectedDays.filter(d => d !== day))
+                              } else {
+                                setSelectedDays([...selectedDays, day].sort())
+                              }
+                            }}
+                            className={`w-10 h-10 rounded-full text-sm font-medium transition-colors ${selectedDays.includes(day)
+                              ? 'bg-red-500 text-white'
+                              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                              }`}
+                          >
+                            {label}
+                          </button>
+                        ))}
+                      </div>
+                      {selectedDays.length === 0 && (
+                        <p className="text-red-500 text-xs mt-1">Selectează cel puțin o zi</p>
+                      )}
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        La ce oră preferi?
+                      </label>
+                      <div className="flex gap-3">
+                        <button
+                          type="button"
+                          onClick={() => setPreferredHour('morning')}
+                          className={`flex-1 py-3 px-4 rounded-lg text-sm font-medium transition-colors ${preferredHour === 'morning'
+                            ? 'bg-red-500 text-white'
+                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                            }`}
+                        >
+                          ☀️ Dimineață (8:00)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setPreferredHour('evening')}
+                          className={`flex-1 py-3 px-4 rounded-lg text-sm font-medium transition-colors ${preferredHour === 'evening'
+                            ? 'bg-red-500 text-white'
+                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                            }`}
+                        >
+                          🌙 Seară (20:00)
+                        </button>
+                      </div>
                     </div>
 
                     <button

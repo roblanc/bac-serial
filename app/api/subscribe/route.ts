@@ -9,7 +9,7 @@ function generateId() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { email, bookSlug, frequency } = body
+    const { email, bookSlug, selectedDays, preferredHour } = body
 
     // Validate input
     if (!email || !bookSlug) {
@@ -28,6 +28,18 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Validate selectedDays
+    const days = Array.isArray(selectedDays) ? selectedDays : [1, 3, 5]
+    if (days.length === 0) {
+      return NextResponse.json(
+        { error: 'Selectează cel puțin o zi' },
+        { status: 400 }
+      )
+    }
+
+    // Validate preferredHour
+    const hour = typeof preferredHour === 'number' ? preferredHour : 8
+
     // Rate limiting check
     const rateLimit = await checkSubscriptionRateLimit(email)
     if (!rateLimit.allowed) {
@@ -43,14 +55,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Map frequency to database value
-    const frequencyMap: Record<string, string> = {
-      'daily': 'DAILY',
-      '3x': 'THREE_PER_WEEK',
-      'weekly': 'WEEKLY',
-    }
-    const dbFrequency = frequencyMap[frequency] || 'THREE_PER_WEEK'
-
     // Check if subscription already exists
     const existing = await turso.execute({
       sql: 'SELECT id FROM Subscription WHERE email = ? AND bookSlug = ?',
@@ -64,14 +68,14 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // Create subscription
+    // Create subscription with custom schedule
     const id = generateId()
     const now = new Date().toISOString()
 
     await turso.execute({
-      sql: `INSERT INTO Subscription (id, email, bookSlug, frequency, status, currentFragmentIndex, createdAt, updatedAt) 
-            VALUES (?, ?, ?, ?, 'ACTIVE', 0, ?, ?)`,
-      args: [id, email, bookSlug, dbFrequency, now, now]
+      sql: `INSERT INTO Subscription (id, email, bookSlug, frequency, status, currentFragmentIndex, preferredDays, preferredHour, createdAt, updatedAt) 
+            VALUES (?, ?, ?, 'CUSTOM', 'ACTIVE', 0, ?, ?, ?, ?)`,
+      args: [id, email, bookSlug, JSON.stringify(days), hour, now, now]
     })
 
     return NextResponse.json({
