@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { turso } from '@/lib/turso'
+import { checkSubscriptionRateLimit, logRateLimitViolation } from '@/lib/rate-limit'
 
 function generateId() {
   return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
@@ -24,6 +25,21 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Adresa de email nu este validă' },
         { status: 400 }
+      )
+    }
+
+    // Rate limiting check
+    const rateLimit = await checkSubscriptionRateLimit(email)
+    if (!rateLimit.allowed) {
+      await logRateLimitViolation(email, 'subscription')
+      return NextResponse.json(
+        { error: rateLimit.reason },
+        {
+          status: 429,
+          headers: rateLimit.retryAfter
+            ? { 'Retry-After': String(rateLimit.retryAfter) }
+            : {}
+        }
       )
     }
 
@@ -53,8 +69,8 @@ export async function POST(request: NextRequest) {
     const now = new Date().toISOString()
 
     await turso.execute({
-      sql: `INSERT INTO Subscription (id, email, bookSlug, frequency, status, createdAt, updatedAt) 
-            VALUES (?, ?, ?, ?, 'ACTIVE', ?, ?)`,
+      sql: `INSERT INTO Subscription (id, email, bookSlug, frequency, status, currentFragmentIndex, createdAt, updatedAt) 
+            VALUES (?, ?, ?, ?, 'ACTIVE', 0, ?, ?)`,
       args: [id, email, bookSlug, dbFrequency, now, now]
     })
 
