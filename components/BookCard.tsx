@@ -9,8 +9,14 @@ interface BookCardProps {
 export default function BookCard({ book }: BookCardProps) {
   return (
     <Link href={`/lectura/${book.slug}`} className="book-card group block">
-      {/* Book Cover */}
-      <div className="aspect-[3/4] relative overflow-hidden">
+      {/* Book Cover - aspect ratio matches cover images (641:1024 ≈ 5:8) */}
+      <div
+        className="relative overflow-hidden rounded-lg"
+        style={{
+          aspectRatio: '641 / 1024',
+          backgroundColor: book.coverColor
+        }}
+      >
         {book.coverImage ? (
           <Image
             src={book.coverImage}
@@ -19,10 +25,7 @@ export default function BookCard({ book }: BookCardProps) {
             className="object-cover"
           />
         ) : (
-          <div
-            className="w-full h-full flex items-center justify-center p-4"
-            style={{ backgroundColor: book.coverColor }}
-          >
+          <div className="w-full h-full flex items-center justify-center p-4">
             <span className="text-white/90 font-semibold text-lg text-center leading-tight">
               {book.title}
             </span>

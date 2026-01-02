@@ -75,7 +75,13 @@ export default function BookPage({ params }: PageProps) {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Book Cover */}
           <div className="md:col-span-1">
-            <div className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg relative">
+            <div
+              className="rounded-lg overflow-hidden shadow-lg relative"
+              style={{
+                aspectRatio: '641 / 1024',
+                backgroundColor: book.coverColor
+              }}
+            >
               {book.coverImage ? (
                 <img
                   src={book.coverImage}
@@ -83,10 +89,7 @@ export default function BookPage({ params }: PageProps) {
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <div
-                  className="w-full h-full flex items-center justify-center p-6"
-                  style={{ backgroundColor: book.coverColor }}
-                >
+                <div className="w-full h-full flex items-center justify-center p-6">
                   <span className="text-white text-xl font-bold text-center leading-tight">
                     {book.title}
                   </span>
