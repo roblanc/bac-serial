@@ -25,7 +25,7 @@ interface FragmentData {
     content: string
 }
 
-async function loadFragment(bookSlug: string, fragmentIndex: number): Promise<FragmentData | null> {
+export async function loadFragment(bookSlug: string, fragmentIndex: number): Promise<FragmentData | null> {
     const contentDir = path.join(process.cwd(), 'content')
     const genres = ['epic', 'liric', 'drama']
 
