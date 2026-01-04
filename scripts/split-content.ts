@@ -108,7 +108,8 @@ ${fragment.content}
 }
 
 // Main execution
-if (require.main === module) {
+import { fileURLToPath } from 'url'
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
     const args = process.argv.slice(2)
 
     if (args.length < 2) {

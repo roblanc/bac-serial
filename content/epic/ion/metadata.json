@@ -1,34 +1,636 @@
 {
-    "bookSlug": "ion-liviu-rebreanu",
-    "title": "Ion",
-    "author": "Liviu Rebreanu",
-    "totalFragments": 112,
-    "source": "Wikisource (ro.wikisource.org)",
-    "copyright": "Domeniu public (70+ ani de la moartea autorului)",
-    "fragments": [
-        {
-            "index": 1,
-            "title": "Capitolul I: Începutul (1/4)",
-            "wordCount": 1480,
-            "file": "fragment-001.md"
-        },
-        {
-            "index": 2,
-            "title": "Capitolul I: Începutul (2/4)",
-            "wordCount": 1520,
-            "file": "fragment-002.md"
-        },
-        {
-            "index": 3,
-            "title": "Capitolul I: Începutul (3/4)",
-            "wordCount": 1490,
-            "file": "fragment-003.md"
-        },
-        {
-            "index": 4,
-            "title": "Capitolul I: Începutul (4/4)",
-            "wordCount": 1510,
-            "file": "fragment-004.md"
-        }
-    ]
+  "totalFragments": 105,
+  "totalWords": 151924,
+  "fragments": [
+    {
+      "index": 1,
+      "title": "ion - Fragment 1",
+      "wordCount": 1407,
+      "file": "fragment-001.md"
+    },
+    {
+      "index": 2,
+      "title": "ion - Fragment 2",
+      "wordCount": 1500,
+      "file": "fragment-002.md"
+    },
+    {
+      "index": 3,
+      "title": "ion - Fragment 3",
+      "wordCount": 1498,
+      "file": "fragment-003.md"
+    },
+    {
+      "index": 4,
+      "title": "ion - Fragment 4",
+      "wordCount": 1472,
+      "file": "fragment-004.md"
+    },
+    {
+      "index": 5,
+      "title": "ion - Fragment 5",
+      "wordCount": 1486,
+      "file": "fragment-005.md"
+    },
+    {
+      "index": 6,
+      "title": "ion - Fragment 6",
+      "wordCount": 1458,
+      "file": "fragment-006.md"
+    },
+    {
+      "index": 7,
+      "title": "ion - Fragment 7",
+      "wordCount": 1486,
+      "file": "fragment-007.md"
+    },
+    {
+      "index": 8,
+      "title": "ion - Fragment 8",
+      "wordCount": 1492,
+      "file": "fragment-008.md"
+    },
+    {
+      "index": 9,
+      "title": "ion - Fragment 9",
+      "wordCount": 1389,
+      "file": "fragment-009.md"
+    },
+    {
+      "index": 10,
+      "title": "ion - Fragment 10",
+      "wordCount": 1203,
+      "file": "fragment-010.md"
+    },
+    {
+      "index": 11,
+      "title": "ion - Fragment 11",
+      "wordCount": 1402,
+      "file": "fragment-011.md"
+    },
+    {
+      "index": 12,
+      "title": "ion - Fragment 12",
+      "wordCount": 1499,
+      "file": "fragment-012.md"
+    },
+    {
+      "index": 13,
+      "title": "ion - Fragment 13",
+      "wordCount": 1395,
+      "file": "fragment-013.md"
+    },
+    {
+      "index": 14,
+      "title": "ion - Fragment 14",
+      "wordCount": 1440,
+      "file": "fragment-014.md"
+    },
+    {
+      "index": 15,
+      "title": "ion - Fragment 15",
+      "wordCount": 1492,
+      "file": "fragment-015.md"
+    },
+    {
+      "index": 16,
+      "title": "ion - Fragment 16",
+      "wordCount": 1186,
+      "file": "fragment-016.md"
+    },
+    {
+      "index": 17,
+      "title": "ion - Fragment 17",
+      "wordCount": 1484,
+      "file": "fragment-017.md"
+    },
+    {
+      "index": 18,
+      "title": "ion - Fragment 18",
+      "wordCount": 1489,
+      "file": "fragment-018.md"
+    },
+    {
+      "index": 19,
+      "title": "ion - Fragment 19",
+      "wordCount": 1437,
+      "file": "fragment-019.md"
+    },
+    {
+      "index": 20,
+      "title": "ion - Fragment 20",
+      "wordCount": 1452,
+      "file": "fragment-020.md"
+    },
+    {
+      "index": 21,
+      "title": "ion - Fragment 21",
+      "wordCount": 1499,
+      "file": "fragment-021.md"
+    },
+    {
+      "index": 22,
+      "title": "ion - Fragment 22",
+      "wordCount": 1495,
+      "file": "fragment-022.md"
+    },
+    {
+      "index": 23,
+      "title": "ion - Fragment 23",
+      "wordCount": 1329,
+      "file": "fragment-023.md"
+    },
+    {
+      "index": 24,
+      "title": "ion - Fragment 24",
+      "wordCount": 1465,
+      "file": "fragment-024.md"
+    },
+    {
+      "index": 25,
+      "title": "ion - Fragment 25",
+      "wordCount": 1375,
+      "file": "fragment-025.md"
+    },
+    {
+      "index": 26,
+      "title": "ion - Fragment 26",
+      "wordCount": 1476,
+      "file": "fragment-026.md"
+    },
+    {
+      "index": 27,
+      "title": "ion - Fragment 27",
+      "wordCount": 1467,
+      "file": "fragment-027.md"
+    },
+    {
+      "index": 28,
+      "title": "ion - Fragment 28",
+      "wordCount": 1248,
+      "file": "fragment-028.md"
+    },
+    {
+      "index": 29,
+      "title": "ion - Fragment 29",
+      "wordCount": 1499,
+      "file": "fragment-029.md"
+    },
+    {
+      "index": 30,
+      "title": "ion - Fragment 30",
+      "wordCount": 1481,
+      "file": "fragment-030.md"
+    },
+    {
+      "index": 31,
+      "title": "ion - Fragment 31",
+      "wordCount": 1490,
+      "file": "fragment-031.md"
+    },
+    {
+      "index": 32,
+      "title": "ion - Fragment 32",
+      "wordCount": 1484,
+      "file": "fragment-032.md"
+    },
+    {
+      "index": 33,
+      "title": "ion - Fragment 33",
+      "wordCount": 1498,
+      "file": "fragment-033.md"
+    },
+    {
+      "index": 34,
+      "title": "ion - Fragment 34",
+      "wordCount": 1380,
+      "file": "fragment-034.md"
+    },
+    {
+      "index": 35,
+      "title": "ion - Fragment 35",
+      "wordCount": 1421,
+      "file": "fragment-035.md"
+    },
+    {
+      "index": 36,
+      "title": "ion - Fragment 36",
+      "wordCount": 1461,
+      "file": "fragment-036.md"
+    },
+    {
+      "index": 37,
+      "title": "ion - Fragment 37",
+      "wordCount": 1115,
+      "file": "fragment-037.md"
+    },
+    {
+      "index": 38,
+      "title": "ion - Fragment 38",
+      "wordCount": 1417,
+      "file": "fragment-038.md"
+    },
+    {
+      "index": 39,
+      "title": "ion - Fragment 39",
+      "wordCount": 1427,
+      "file": "fragment-039.md"
+    },
+    {
+      "index": 40,
+      "title": "ion - Fragment 40",
+      "wordCount": 1492,
+      "file": "fragment-040.md"
+    },
+    {
+      "index": 41,
+      "title": "ion - Fragment 41",
+      "wordCount": 1496,
+      "file": "fragment-041.md"
+    },
+    {
+      "index": 42,
+      "title": "ion - Fragment 42",
+      "wordCount": 1480,
+      "file": "fragment-042.md"
+    },
+    {
+      "index": 43,
+      "title": "ion - Fragment 43",
+      "wordCount": 1461,
+      "file": "fragment-043.md"
+    },
+    {
+      "index": 44,
+      "title": "ion - Fragment 44",
+      "wordCount": 1307,
+      "file": "fragment-044.md"
+    },
+    {
+      "index": 45,
+      "title": "ion - Fragment 45",
+      "wordCount": 1480,
+      "file": "fragment-045.md"
+    },
+    {
+      "index": 46,
+      "title": "ion - Fragment 46",
+      "wordCount": 1448,
+      "file": "fragment-046.md"
+    },
+    {
+      "index": 47,
+      "title": "ion - Fragment 47",
+      "wordCount": 1469,
+      "file": "fragment-047.md"
+    },
+    {
+      "index": 48,
+      "title": "ion - Fragment 48",
+      "wordCount": 1447,
+      "file": "fragment-048.md"
+    },
+    {
+      "index": 49,
+      "title": "ion - Fragment 49",
+      "wordCount": 1492,
+      "file": "fragment-049.md"
+    },
+    {
+      "index": 50,
+      "title": "ion - Fragment 50",
+      "wordCount": 1419,
+      "file": "fragment-050.md"
+    },
+    {
+      "index": 51,
+      "title": "ion - Fragment 51",
+      "wordCount": 1307,
+      "file": "fragment-051.md"
+    },
+    {
+      "index": 52,
+      "title": "ion - Fragment 52",
+      "wordCount": 1469,
+      "file": "fragment-052.md"
+    },
+    {
+      "index": 53,
+      "title": "ion - Fragment 53",
+      "wordCount": 1470,
+      "file": "fragment-053.md"
+    },
+    {
+      "index": 54,
+      "title": "ion - Fragment 54",
+      "wordCount": 1414,
+      "file": "fragment-054.md"
+    },
+    {
+      "index": 55,
+      "title": "ion - Fragment 55",
+      "wordCount": 1480,
+      "file": "fragment-055.md"
+    },
+    {
+      "index": 56,
+      "title": "ion - Fragment 56",
+      "wordCount": 1423,
+      "file": "fragment-056.md"
+    },
+    {
+      "index": 57,
+      "title": "ion - Fragment 57",
+      "wordCount": 1473,
+      "file": "fragment-057.md"
+    },
+    {
+      "index": 58,
+      "title": "ion - Fragment 58",
+      "wordCount": 1481,
+      "file": "fragment-058.md"
+    },
+    {
+      "index": 59,
+      "title": "ion - Fragment 59",
+      "wordCount": 1491,
+      "file": "fragment-059.md"
+    },
+    {
+      "index": 60,
+      "title": "ion - Fragment 60",
+      "wordCount": 1496,
+      "file": "fragment-060.md"
+    },
+    {
+      "index": 61,
+      "title": "ion - Fragment 61",
+      "wordCount": 1444,
+      "file": "fragment-061.md"
+    },
+    {
+      "index": 62,
+      "title": "ion - Fragment 62",
+      "wordCount": 1481,
+      "file": "fragment-062.md"
+    },
+    {
+      "index": 63,
+      "title": "ion - Fragment 63",
+      "wordCount": 1448,
+      "file": "fragment-063.md"
+    },
+    {
+      "index": 64,
+      "title": "ion - Fragment 64",
+      "wordCount": 1499,
+      "file": "fragment-064.md"
+    },
+    {
+      "index": 65,
+      "title": "ion - Fragment 65",
+      "wordCount": 1492,
+      "file": "fragment-065.md"
+    },
+    {
+      "index": 66,
+      "title": "ion - Fragment 66",
+      "wordCount": 1481,
+      "file": "fragment-066.md"
+    },
+    {
+      "index": 67,
+      "title": "ion - Fragment 67",
+      "wordCount": 1499,
+      "file": "fragment-067.md"
+    },
+    {
+      "index": 68,
+      "title": "ion - Fragment 68",
+      "wordCount": 1479,
+      "file": "fragment-068.md"
+    },
+    {
+      "index": 69,
+      "title": "ion - Fragment 69",
+      "wordCount": 1368,
+      "file": "fragment-069.md"
+    },
+    {
+      "index": 70,
+      "title": "ion - Fragment 70",
+      "wordCount": 1446,
+      "file": "fragment-070.md"
+    },
+    {
+      "index": 71,
+      "title": "ion - Fragment 71",
+      "wordCount": 1482,
+      "file": "fragment-071.md"
+    },
+    {
+      "index": 72,
+      "title": "ion - Fragment 72",
+      "wordCount": 1442,
+      "file": "fragment-072.md"
+    },
+    {
+      "index": 73,
+      "title": "ion - Fragment 73",
+      "wordCount": 1500,
+      "file": "fragment-073.md"
+    },
+    {
+      "index": 74,
+      "title": "ion - Fragment 74",
+      "wordCount": 1446,
+      "file": "fragment-074.md"
+    },
+    {
+      "index": 75,
+      "title": "ion - Fragment 75",
+      "wordCount": 1431,
+      "file": "fragment-075.md"
+    },
+    {
+      "index": 76,
+      "title": "ion - Fragment 76",
+      "wordCount": 1476,
+      "file": "fragment-076.md"
+    },
+    {
+      "index": 77,
+      "title": "ion - Fragment 77",
+      "wordCount": 1448,
+      "file": "fragment-077.md"
+    },
+    {
+      "index": 78,
+      "title": "ion - Fragment 78",
+      "wordCount": 1489,
+      "file": "fragment-078.md"
+    },
+    {
+      "index": 79,
+      "title": "ion - Fragment 79",
+      "wordCount": 1490,
+      "file": "fragment-079.md"
+    },
+    {
+      "index": 80,
+      "title": "ion - Fragment 80",
+      "wordCount": 1459,
+      "file": "fragment-080.md"
+    },
+    {
+      "index": 81,
+      "title": "ion - Fragment 81",
+      "wordCount": 1492,
+      "file": "fragment-081.md"
+    },
+    {
+      "index": 82,
+      "title": "ion - Fragment 82",
+      "wordCount": 1403,
+      "file": "fragment-082.md"
+    },
+    {
+      "index": 83,
+      "title": "ion - Fragment 83",
+      "wordCount": 1442,
+      "file": "fragment-083.md"
+    },
+    {
+      "index": 84,
+      "title": "ion - Fragment 84",
+      "wordCount": 1491,
+      "file": "fragment-084.md"
+    },
+    {
+      "index": 85,
+      "title": "ion - Fragment 85",
+      "wordCount": 1450,
+      "file": "fragment-085.md"
+    },
+    {
+      "index": 86,
+      "title": "ion - Fragment 86",
+      "wordCount": 1465,
+      "file": "fragment-086.md"
+    },
+    {
+      "index": 87,
+      "title": "ion - Fragment 87",
+      "wordCount": 1497,
+      "file": "fragment-087.md"
+    },
+    {
+      "index": 88,
+      "title": "ion - Fragment 88",
+      "wordCount": 1500,
+      "file": "fragment-088.md"
+    },
+    {
+      "index": 89,
+      "title": "ion - Fragment 89",
+      "wordCount": 1496,
+      "file": "fragment-089.md"
+    },
+    {
+      "index": 90,
+      "title": "ion - Fragment 90",
+      "wordCount": 1463,
+      "file": "fragment-090.md"
+    },
+    {
+      "index": 91,
+      "title": "ion - Fragment 91",
+      "wordCount": 1447,
+      "file": "fragment-091.md"
+    },
+    {
+      "index": 92,
+      "title": "ion - Fragment 92",
+      "wordCount": 1479,
+      "file": "fragment-092.md"
+    },
+    {
+      "index": 93,
+      "title": "ion - Fragment 93",
+      "wordCount": 1478,
+      "file": "fragment-093.md"
+    },
+    {
+      "index": 94,
+      "title": "ion - Fragment 94",
+      "wordCount": 1441,
+      "file": "fragment-094.md"
+    },
+    {
+      "index": 95,
+      "title": "ion - Fragment 95",
+      "wordCount": 1474,
+      "file": "fragment-095.md"
+    },
+    {
+      "index": 96,
+      "title": "ion - Fragment 96",
+      "wordCount": 1468,
+      "file": "fragment-096.md"
+    },
+    {
+      "index": 97,
+      "title": "ion - Fragment 97",
+      "wordCount": 1343,
+      "file": "fragment-097.md"
+    },
+    {
+      "index": 98,
+      "title": "ion - Fragment 98",
+      "wordCount": 1479,
+      "file": "fragment-098.md"
+    },
+    {
+      "index": 99,
+      "title": "ion - Fragment 99",
+      "wordCount": 1332,
+      "file": "fragment-099.md"
+    },
+    {
+      "index": 100,
+      "title": "ion - Fragment 100",
+      "wordCount": 1493,
+      "file": "fragment-100.md"
+    },
+    {
+      "index": 101,
+      "title": "ion - Fragment 101",
+      "wordCount": 1414,
+      "file": "fragment-101.md"
+    },
+    {
+      "index": 102,
+      "title": "ion - Fragment 102",
+      "wordCount": 1483,
+      "file": "fragment-102.md"
+    },
+    {
+      "index": 103,
+      "title": "ion - Fragment 103",
+      "wordCount": 1491,
+      "file": "fragment-103.md"
+    },
+    {
+      "index": 104,
+      "title": "ion - Fragment 104",
+      "wordCount": 1476,
+      "file": "fragment-104.md"
+    },
+    {
+      "index": 105,
+      "title": "ion - Fragment 105",
+      "wordCount": 1438,
+      "file": "fragment-105.md"
+    }
+  ]
 }

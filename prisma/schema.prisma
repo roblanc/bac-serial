@@ -68,7 +68,9 @@ model Subscription {
   userId            String
   bookId            String
   currentChapterIdx Int      @default(0)
-  frequency         String   @default("THREE_PER_WEEK") // DAILY, THREE_PER_WEEK, WEEKLY
+  frequency         String   @default("THREE_PER_WEEK") // DAILY, THREE_PER_WEEK, WEEKLY, CUSTOM
+  preferredDays     String?  // JSON string for custom days e.g. [1,3,5]
+  preferredHour     Int?     // Hour 0-23 for delivery
   status            String   @default("ACTIVE") // ACTIVE, PAUSED, COMPLETED, CANCELLED
   pausedUntil       DateTime?
   createdAt         DateTime @default(now())

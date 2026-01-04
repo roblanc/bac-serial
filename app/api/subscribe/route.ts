@@ -55,10 +55,57 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if subscription already exists
+    // 1. Get Book ID
+    const bookResult = await turso.execute({
+      sql: 'SELECT id FROM Book WHERE slug = ?',
+      args: [bookSlug]
+    })
+
+    if (bookResult.rows.length === 0) {
+      return NextResponse.json(
+        { error: 'Această carte nu există.' },
+        { status: 404 }
+      )
+    }
+    const bookId = bookResult.rows[0].id as string
+
+    // 2. Get or Create User
+    let userId: string
+    const userResult = await turso.execute({
+      sql: 'SELECT id FROM User WHERE email = ?',
+      args: [email]
+    })
+
+    const now = new Date().toISOString()
+
+    if (userResult.rows.length > 0) {
+      userId = userResult.rows[0].id as string
+    } else {
+      userId = generateId()
+      // Try to create user
+      try {
+        await turso.execute({
+          sql: 'INSERT INTO User (id, email, createdAt, updatedAt) VALUES (?, ?, ?, ?)',
+          args: [userId, email, now, now]
+        })
+      } catch (e) {
+        // Fallback if user was created concurrently
+        const retryUser = await turso.execute({
+          sql: 'SELECT id FROM User WHERE email = ?',
+          args: [email]
+        })
+        if (retryUser.rows.length > 0) {
+          userId = retryUser.rows[0].id as string
+        } else {
+          throw e
+        }
+      }
+    }
+
+    // 3. Check if subscription already exists
     const existing = await turso.execute({
-      sql: 'SELECT id FROM Subscription WHERE email = ? AND bookSlug = ?',
-      args: [email, bookSlug]
+      sql: 'SELECT id FROM Subscription WHERE userId = ? AND bookId = ?',
+      args: [userId, bookId]
     })
 
     if (existing.rows.length > 0) {
@@ -68,14 +115,13 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // Create subscription with custom schedule
-    const id = generateId()
-    const now = new Date().toISOString()
+    // 4. Create subscription with custom schedule
+    const subId = generateId()
 
     await turso.execute({
-      sql: `INSERT INTO Subscription (id, email, bookSlug, frequency, status, currentFragmentIndex, preferredDays, preferredHour, createdAt, updatedAt) 
+      sql: `INSERT INTO Subscription (id, userId, bookId, frequency, status, currentChapterIdx, preferredDays, preferredHour, createdAt, updatedAt) 
             VALUES (?, ?, ?, 'CUSTOM', 'ACTIVE', 0, ?, ?, ?, ?)`,
-      args: [id, email, bookSlug, JSON.stringify(days), hour, now, now]
+      args: [subId, userId, bookId, JSON.stringify(days), hour, now, now]
     })
 
     return NextResponse.json({

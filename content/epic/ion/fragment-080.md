@@ -1,0 +1,41 @@
+---
+title: "ion - Fragment 80"
+index: 80
+wordCount: 1459
+---
+
+— Am auzit, mi-a spus Grofșoru ce-ai tras... Of, câinii, câinii!
+
+Se bucura el, dar totuși clătina trist din cap, căci toate acestea nu-l împiedicau de a fi suspendat din învățământ, de a fi nevoit să-și lase în voia soartei căsuța lui, de a munci din greu pentru o bucățică de pâine și de a-și vedea primejduită liniștea bătrâneților.
+
+Când sosi noul termen de judecată cu Belciug, Herdelea vru să ia iarăși un certificat medical precum că pârâta doamna Herdelea e bolnavă și nu se poate prezenta. Grofșoru însă, căruia îi povestise și nerușinarea de la Bobotează, îl sfătui dimpotrivă, strigând:
+
+— Lasă-l să ne judecăm, să ți-l scutur de să te ție minte! Și, într-adevăr, Grofșoru îl suci și-l învârti până ce Belciug făcu fețe-fețe, înghițind în sec, iar în cele din urmă declară singur că-și retrage plângerea. Apoi când avocatul arătă pe reclamant ca o fire răzbunătoare care, în ciuda obligațiilor sale preoțești, nu s-a dus cu sfânta cruce în casa unor buni creștini, pentru care faptă de altfel va trebui să dea socoteală autorităților bisericești competente, doamna Herdelea se aprinse atât de mult că nu se stăpâni să nu murmure chiar în fața judecății:
+
+— Pămătuful! Grofșoru îndemnă apoi pe Herdelea să n-aibă grijă nici în privința sentinței de la tribunal. Se însărcinează el să-l scoată ca lamura. Suspendarea e un moft. Ba e și o onoare să fii suspendat pentru îndeplinirea unei obligații naționale, cum este apărarea țăranului oropsit. A avut noroc judecătorul că s-a transferat, altminteri o pățea urât de tot până la sfârșit, căci prea a fost ticălos și voise s-o ia razna, ungurește. Și fiindcă Herdelea, ca omul pățit, se îndoia și nu credea, Grofșoru se înfuria, se jura și striga că ,,să-i taie mustățile dacă n-are să-l facă achitat de orice pedeapsă". Însemnătatea acestei promisiuni lua proporții știindu-se în toată Armadia că Grofșoru ținea la mustăți mai mult decât la lumina ochilor, că în fiecare zi venea acasă la dânsul bărbierul să i le spele, să i le ungă cu pomăduri, și să i le frizeze și să le răsucească.
+
+La vreo lună după ce se stabiliră în Armadia, sosi și Ghighi din Vireag, de la Laura, care născuse o fetiță. Ghighi se înduioșă puțin c-a rămas pustie căsuța din Pripas, dar apoi se împăcă repede. Aici își vedea zilnic prietenele de sindrofie, se ducea pe la ele, veneau ele pe la ea; de asemenea tinerii Armadiei o puteau vedea mai des, o înconjurau, o complimentau, îi mai dădeau câte-o serenadă... La serata dansantă de la sfârșitul lui februarie se duse împreună cu bătrânii și petrecu admirabil. Zăgreanu îi dădu târcoale toată vremea și, măcar că la început ea a fost rece cu dânsul, ca unul care e vinovat de nenorocirea familiei, în cele din urmă se convinse că e băiat cult, așezat, drăguț și cavaler, ceea ce recunoscu și doamna Herdelea.
+
+De când sosi Ghighi începu de altfel și Zăgreanu să vină mai deseori pe la Herdelea să-i ceară sfaturi și îndrumări în chestiuni de școală și, firește, la sfârșit, nu uita să mai stea de vorbă și cu domnișoara, devenind foarte melancolic și suspinând în răstimpuri.
+
+De altfel Ghighi, cât stătuse la sora ei, se schimbase, se făcuse adevărată fată mare, deși încă n-avea douăzeci de ani. Crescuse, se împlinise, pierduse copilăria și-și păstrase veselia comunicativă. Ochii ei albaștri însă luceau mai puternic și parcă ascundeau dorințe nelămurite... Povestea bătrânilor cu mare însuflețire viața fericită și armonioasă ce o duce Laura cu Pintea. În patru luni și jumătate nu i-a auzit niciodată certându-se, nici barem neînvoindu-se. George e delicat, iar Laura nu-i iese din vorbă și a ajuns să-i ghicească și gândurile. Fetița le-a botezat-o protopopul din Baia Mare; i-au zis Maria, după numele doamnei Herdelea. La vară au să vie negreșit prin Armadia, ca pe urmă să meargă cu toții la băi la Sângeorz, unde e vorba să sosească și rudele din România.
+
+Mândru și mulțumit ca orice învingător, Ion simțea totuși un gol ciudat în suflet. Se gândea și plănuia cum să-și muncească moșia și în aceeași vreme inima îi umbla parcă aiurea, cercetând, adulmecând neliniștită... Apoi când prinse de veste că se mărită Florica vădanei lui Maxim cu George Bulbuc, îl zgudui un fior de durere. ,,Cum se mărită și de ce?" își zise furios ca și când cineva i-ar fi furat cea mai bună și mai mare delniță de pământ.
+
+În vălmășagul goanei după moșie nu se mai sinchisise de nimeni și de nimic în lume. I se păruse că nici nu se poate întâmpla altceva și că tot satul trebuie să stea în loc, să ia parte sau cel puțin să privească la lupta lui cumplită. Acum se mira și se mânia văzând că oamenii și-au căutat de nevoile lor precum și-a căutat el de-ale lui, că lumea și-a urmat mersul ei, parcă el nici n-ar fi fost.
+
+Se cutremură ca deșteptat dintr-un vis. Își aduse aminte cât i-a fost de dragă odinioară Florica și nu pricepea de ce vrea dânsa să se mărite cu altul, când el e aici și o iubește ca și atunci? Își reamintea cum i-a spus, în noaptea nunții, că tot ea i-e dragă ș-apoi totuși nici nu s-a mai gândit pe urmă la ea, ca și când ar fi înghițit-o pământul... Păreri de rău îi rodeau ini ma. Îi trecea prin creieri să alerge la Florica, să-i spună că tot dragă i-a rămas și să-i poruncească să nu se mărite... Dar se dezmeticea rușinat. Om însurat, cu copil, l-ar huidui lumea și l-ar alunga Florica... Ei, dacă n-ar fi Ana...
+
+Druștele și colăcarii veniră să-l cheme la nuntă și el făgădui bucuros că va merge de bună seamă.
+
+Însurătoarea feciorului lui Toma cu o fată săracă lipită stârnise de altminteri vâlvă în Pripas. Mai ales tocmai calicii îi ocărau că ia o calică și spuneau în gura mare că George are să pape repede averea bătrânului. Toma auzea zvonurile și răspundea neîntrebat:
+
+— Eu nu mă bag, nu mă amestec... Parcă eu am să trăiesc cu ea? Eu i-am spus totdeauna: Dragul tatii, fă ce vrei și ce-ți cere inima. Că noi la avere nu ne uităm, c-avem, slavă Domnului, și nu suntem muritori de foame... Dacă-i place lui fata și i-e dragă, să fie sănătoși. Că decât să trăiești cu o ciumă-n casă, mai bine să te arunci în Someș cu capul în jos...
+
+George nu-și încăpea în piele de mândrie. Avea mulțumirea, ce-l măgulea grozav, că a cucerit pe Florica și însurătoarea i se părea încoronarea unei biruințe nemaipomenite.
+
+De când se cununase Ion Glanetașu cu Ana, el rămăsese fruntea flăcăilor, ceea ce-l răsplătise puțin pentru înfrângerea ce o suferise atunci. Deși ar fi fost timpul să se însoare și dânsul, nu se putea hotărî. Tatăl său îl zorea, iar el amâna mereu, ca să se bucure în tihnă de plăcerea de-a fi călăuză tineretului în bine și-n rău, la petreceri și la bătăi. De altfel spunea cu fală că nici o fată din sat nu-i destul de vrednică de dânsul. Fără să-și dea seama, vorbea chiar adevărat. Căci ca să-i placă vreuna, trebuia întâi să vadă că place și altuia, și că luând-o pricinuiește necaz cuiva.
+
+Toamna trecută însă George primise o lovitură în mândria lui de cap al tinerimii. Atunci se întorsese de la oaste Nicolae Tătaru, feciorul lui Trifon, voinic, aspru la înfățișare și blând la inimă. Era băiat cu învățătură: umblase trei ani la liceul din Armadia și nu continuase fiindcă repetase de două ori clasa a
+
+doua. Din școală rămase totuși cu dragostea de carte și, când a crescut mai mare, s-a abonat la Foaia poporului, săptămânală, din care citea duminica, pe prispă, părinților și vecinilor dornici de a afla ce se petrece prin lume. În armată a înaintat sergent și se fălea că i-ar fi propus însuși căpitanul să se reangajeze. Venise mai dezghețat din cătănie, vorbind mai răspicat, parc-ar fi comandat mereu, umblând ca bradul și având veșnic pe limbă câte-un also și câte un marș sau ruic, prin care uimea pe flăcăii și chiar pe bărbații din sat. Macedon Cercetașu îl îmbrățișa în fiecare duminică la cârciumă și se plângea că feciorul lui a fugit de trei ori de la oștire, de-l face de râsul lumii. Cu toate acestea Nicolae era așezat, potolit și se gândea să se însoare cât mai curând, deoarece cei de vârsta lui aveau și copii. Dar, pentru că avea vreo șase frați mai mici ca dânsul, căuta o fată cu zestre, la care să se poată muta, ca să-și ușureze părinții. Până să găsească ce dorea, se ținea de Florica vădanei lui Maxim, cu care-ți era mai mare dragul să te arăți la horă, fiind frumoasă și deșteaptă, deși ca degetul de golașă.
