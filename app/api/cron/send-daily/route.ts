@@ -31,9 +31,20 @@ export async function GET(request: NextRequest) {
         // The preference stored in DB is in Romania time (8 or 20)
         const targetHour = currentHour < 12 ? 8 : 20
 
-        // Get active subscriptions
+        // Get active subscriptions with User and Book details
         const result = await turso.execute(
-            "SELECT id, email, bookSlug, currentFragmentIndex, preferredDays, preferredHour, status FROM Subscription WHERE status = 'ACTIVE'"
+            `SELECT 
+                s.id, 
+                u.email, 
+                b.slug as bookSlug, 
+                s.currentChapterIdx as currentFragmentIndex, 
+                s.preferredDays, 
+                s.preferredHour, 
+                s.status 
+             FROM Subscription s
+             JOIN User u ON s.userId = u.id
+             JOIN Book b ON s.bookId = b.id
+             WHERE s.status = 'ACTIVE'`
         )
 
         const subscriptions = result.rows as unknown as Subscription[]
